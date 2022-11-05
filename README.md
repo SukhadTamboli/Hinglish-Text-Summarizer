@@ -1,244 +1,70 @@
-# COMMENTATOR
+# Getting Started with Create React App
 
-- A Code-mixed Multilingual Text Annotation Framework.
-- Code-mixing on Hinglish Data.
-- Easy extensibility to other code-mixed language pairs such as Gujarati-English, Marathi-English etc.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### 1. Relevant Links :link:
+## Available Scripts
 
-Source Code: [`https://github.com/Shubh-Nisar/commentator`](https://github.com/Shubh-Nisar/commentator)
+In the project directory, you can run:
 
----
+### `npm start`
 
-Youtube Demo: [`https://youtu.be/pFqcwyjAfB4`](https://youtu.be/pFqcwyjAfB4)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
----
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Live Demo Site: [`http://commentator-iitgn.s3-website.ap-south-1.amazonaws.com/`](http://commentator-iitgn.s3-website.ap-south-1.amazonaws.com/)
+### `npm test`
 
-> Usage
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-##### As an Annotator
+### `npm run build`
 
-- Sign-Up to create a new annotator account
-- Login using the credentials
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-##### As an Admin
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-- Special Credentials :wink:
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-      username: commentator
-      password: commentator
+### `npm run eject`
 
----
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-Drive: [`https://drive.google.com/drive/commentator`](https://drive.google.com/drive/folders/1f5TpFEQiadBCGhvNDXgKpOQg7x3OvT88?usp=sharing)
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-> Drive Structure
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-```
-COMMENTATOR
-	Downloads
-		LID
-			ms_lid.zip			# Microsoft Language Identification Code
-	Reports
-		data
-			hindi_english.csv		# Hindi-English Dataset (10 sentences)
-			gujarati_english.csv		# Gujarati-English Dataset (10 sentences)
-```
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
----
+## Learn More
 
-### 2. Folder Structure :books:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```
-backend
-	app.py
-	requirements.txt
-	Dockerfile
-	LID_tool
-fronend
-	build
-	node_module
-	public
-	src
-		Admin
-		Auth
-		Components
-		Edit
-		Home
-		User
-		utils
-		Router.js
-	.env
-	.ignore
-	package-lock.json
-	package.json
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-##### frontend/src/.env
+### Code Splitting
 
-    REACT_APP_BACKEND_URL=http://<YOUR_BACKEND_IP_ADDRESS>:5000
-    OR
-    REACT_APP_BACKEND_URL=http://localhost:5000
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
----
+### Analyzing the Bundle Size
 
-### 3. Database Schemas :department_store:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-|           |                                             |
-| --------- | ------------------------------------------- |
-| lid       | LID based Language Identification of Tokens |
-| sentences | Sentences to be annotated                   |
-| users     | Admin & Annotator Accounts                  |
+### Making a Progressive Web App
 
-### 4. Backend [ Local Server ] :computer:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-##### Steps to Follow
+### Advanced Configuration
 
-a. Navigate inside backend folder
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-    cd backend
+### Deployment
 
-b. Installing Dependencies
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-    pip install -r requirements.txt
+### `npm run build` fails to minify
 
-c. Updating Frontend URL
-
-> Open `app.py` in a code/text editor (Visual Studio Code, Sublime Text, Notepad etc)
-
-    frontend = YOUR_FRONTEND_HOST_URL
-    OR
-    frontend = http://localhost:3000
-
-d. Updating MongoDB URL
-
-> Open `app.py` in a code/text editor (Visual Studio Code, Sublime Text, Notepad etc)
-
-    conn_str = YOUR_MONGODB_URL
-
-e. Download LID Code from the google drive link attached above
-
-> Navigate to Drive > Downloads > LID & download the zip file
->
-> Extract zip file in LID_tool folder
-
-f. Running the local server
-
-    python app.py
-    OR
-    py app.py
-
----
-
-### 5. Frontend [ Local Server ] :computer:
-
-##### Steps to Follow
-
-a. Navigate inside backend folder
-
-    cd frontend
-
-b. Install all frontend dependencies post 1st application download.
-npm i
-
-c. Start the frontend local server.
-
-    npm start
-
-> OR click on the frontend bash/shell file to run the frontend local server.
-
----
-
-### 6. Administrative Configuration :passport_control:
-
-##### Steps to Follow
-
-1. Start Frontend and Backend Local Server. (Refer 2.e & 3.c)
-2. Create an admin account.
-3. Open MongoDB database and set `admin=True` to create superuser/admin account.
-4. Login to Admin Dashboard.
-5. Upload sentences to the database (csv).
-
-### 7. Containerization of Backend using Docker :whale2:
-
-##### Steps to Follow
-
-a. Creating a Docker Hub Account and a public repository
-
-> Visit https://hub.docker.com/
-
-b. Updating Dockerfile
-
-    FROM python:3.9-slim-buster
-    WORKDIR /commentator
-    COPY requirements.txt requirements.txt
-    RUN pip3 install -r requirements.txt
-    COPY . .
-    ENV FLASK_APP=app.py
-    CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
-    EXPOSE 5000/tcp
-
-b. Push Image to Docker Hub
-
-    docker build . -t python-docker
-    docker tag python-docker <DOCKER_USERNAME>/<REPOSITORY_NAME>
-    docker push <DOCKER_USERNAME>/<REPOSITORY_NAME>
-
-c. Run Docker server on port 5000
-
-    docker run -dp 5000:5000 <DOCKER_USERNAME>/<REPOSITORY_NAME>
-
-d. List of active docker containers
-
-    docker ps
-
-e. Stop Docker Container by Container ID.
-
-    docker stop <CONTAINER_ID>
-
----
-
-### 8. Hosting :globe_with_meridians:
-
-a. Backend
-
-> AWS EC2 Instance is used to host the docker container
->
-> Quick Guide: https://youtu.be/awFLzy0XwXo
-
-In the SSH Terminal
-
-    docker pull <DOCKER_USERNAME>/<REPOSITORY_NAME>
-    docker run -dp 5000:5000 <DOCKER_USERNAME>/<REPOSITORY_NAME>
-
-The updated backend URL `http://<public_IPv4_address>:5000`
-
-b. Frontend
-
-> AWS S3 Bucket is used to host the frontend website
->
-> Quick Guide: https://blog.cloudthat.com/step-by-step-guide-to-deploy-reactjs-app-on-aws-s3/
-
-##### Steps to create build
-
-    cd frontend
-    npm run build
-
-The updated frontend URL is available at Properties > Static Web Hosting
-
-### 9. Contributors :busts_in_silhouette:
-
-|                                                                                                                                           |                  |                                                                                |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------ |
-| <img  width="75"  alt="tn"  src="https://user-images.githubusercontent.com/65038837/126761822-ca949453-540f-40f1-a8cd-9a1ed3e4cae2.jpeg"> | Shubh Nisar      | [`https://shubh-nisar.github.io`](https://shubh-nisar.github.io)               |
-| <img  width="75"  alt="vs"  src="">                                                                                                       | Vivek Srivastava | [`https://sites.google.com/view/vivek-srivastava/`](https://www.linkedin.com/) |
-| <img  width="75"  alt="ms"  src="">                                                                                                       | Mayank Singh     | [`https://mayank4490.github.io/`](https://mayank4490.github.io/)               |
-
-### 10. Mentions :eyes:
-
-- https://github.com/microsoft/LID-tool
-- https://fasttext.cc/
-- https://pypi.org/project/langdetect/
-- https://github.com/google/cld3
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
